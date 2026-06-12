@@ -1,0 +1,10 @@
+# Audit de l'ancien site (fichiers de travail, non nécessaires au site)
+_audit/
+
+# Python
+__pycache__/
+*.pyc
+
+# Système
+Thumbs.db
+.DS_Store
