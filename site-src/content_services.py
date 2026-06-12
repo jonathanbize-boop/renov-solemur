@@ -80,21 +80,6 @@ def ba_section(before_img, before_alt, after_img, after_alt, title="Avant / Apr√
 </section>""" % (title, before_img, before_alt, after_img, after_alt)
 
 
-ILLUS = {
-    "platrerie": "illustration-platrerie.png",
-    "isolation-interieure": "illustration-platrerie.png",
-    "revetements-muraux": "illustration-murs.png",
-    "peinture": "illustration-murs.png",
-    "papier-peint": "illustration-renovation-2.png",
-    "revetements-sol": "illustration-sols.png",
-    "carrelage": "illustration-sols.png",
-    "parquet": "illustration-sols.png",
-    "sol-souple": "illustration-sols.png",
-    "renovation-salle-bains": "illustration-salle-bains.png",
-    "renovation-apres-sinistre": "illustration-sinistre.png",
-}
-
-
 def svc(slug, title, desc, crumb, h1, lead, hero_img, hero_alt, *parts,
         crumbs=None, faq_title="Vos questions sur cette prestation"):
     # *parts : une ou plusieurs sections HTML, puis la liste FAQ en dernier
@@ -104,7 +89,6 @@ def svc(slug, title, desc, crumb, h1, lead, hero_img, hero_alt, *parts,
     body = page_hero({
         "crumb": crumb, "crumbs": crumbs or [], "h1": h1, "lead": lead,
         "hero_img": "/assets/img/" + hero_img, "hero_alt": hero_alt,
-        "illu": ILLUS.get(slug),
     })
     body += body_sections
     body += faq_block(faq_items, title=faq_title)

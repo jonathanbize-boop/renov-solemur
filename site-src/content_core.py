@@ -53,8 +53,6 @@ HOME_BODY = """
       <div class="hero__frame">
         <img src="/assets/img/artisan-renovation-valence.jpg" alt="Mur en cours de mise en peinture lors d'une rénovation intérieure à Valence" width="900" height="760" fetchpriority="high">
       </div>
-      <img class="hero__illu" src="/assets/img/illustration-renovation-1.png" alt="" width="120" height="120">
-      <img class="page-hero__illu" src="/assets/img/illustration-renovation-2.png" alt="" width="120" height="120" loading="lazy" style="animation-delay:1.2s">
       <div class="hero__card">
         <span class="num" data-count="10" data-suffix="+">10+</span>
         <span class="lbl">années<br>d'expérience<br>à Valence</span>
@@ -225,7 +223,6 @@ APROPOS_BODY = page_hero({
     "lead": "Particuliers, professionnels et collectivités : confiez vos travaux de rénovation intérieure à une équipe d'artisans qualifiés qui transforme maisons, appartements et locaux professionnels en espaces fonctionnels et esthétiques.",
     "hero_img": "/assets/img/equipe-renovation-valence-2.jpg",
     "hero_alt": "Salle de bains sous combles entièrement rénovée — une réalisation Rénov'Solèmur",
-    "illu": "illustration-artisan.png",
 }) + """
 <section class="section">
   <div class="container">
@@ -302,7 +299,6 @@ CONTACT_BODY = page_hero({
     "lead": "Une question, un projet, besoin d'un devis ? Appelez-nous ou écrivez-nous via le formulaire : nous vous répondons dans les plus brefs délais.",
     "hero_img": "/assets/img/contact-renovation-valence.jpg",
     "hero_alt": "Grand volume lumineux prêt à être rénové : parlons de votre projet",
-    "illu": "illustration-renovation-1.png",
 }) + """
 <section class="section">
   <div class="container">
@@ -414,7 +410,6 @@ GG_BODY = page_hero({
     "lead": "Artisan local installé à Valence, juste de l'autre côté du Rhône, nous réalisons vos projets de rénovation intérieure à Guilherand-Granges : plâtrerie, peinture, pose de sols et salle de bains. Devis gratuit !",
     "hero_img": "/assets/img/renovation-guilherand-granges-1.jpg",
     "hero_alt": "Menuiseries intérieures et portes posées lors d'une rénovation à Guilherand-Granges",
-    "illu": "illustration-artisan.png",
 }) + """
 <section class="section">
   <div class="container">
