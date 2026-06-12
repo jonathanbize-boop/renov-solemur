@@ -23,7 +23,7 @@
   --font-hand: "Caveat", cursive;
 
   /* Échelle */
-  --fs-900: clamp(2.6rem, 6vw, 4.6rem);
+  --fs-900: clamp(2.3rem, 4.2vw, 3.4rem);
   --fs-800: clamp(2.1rem, 4.2vw, 3.2rem);
   --fs-700: clamp(1.6rem, 3vw, 2.2rem);
   --fs-600: clamp(1.25rem, 2vw, 1.5rem);
