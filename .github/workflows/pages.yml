@@ -1,0 +1,41 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # Le site utilise des chemins absolus (/assets, /carrelage...) prevus
+      # pour le domaine final. GitHub Pages sert le site sous /renov-solemur/,
+      # on prefixe donc les chemins. Avec un domaine personnalise plus tard,
+      # supprimer cette etape suffira.
+      - name: Adapter les chemins au sous-dossier GitHub Pages
+        run: |
+          mkdir -p _deploy
+          cp -r site/* _deploy/
+          find _deploy -name '*.html' -exec sed -i 's|href="/|href="/renov-solemur/|g; s|src="/|src="/renov-solemur/|g' {} +
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _deploy
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
